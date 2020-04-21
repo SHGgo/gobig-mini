@@ -1,8 +1,13 @@
 import request from '../utils/request'
 
-export function getCommendVideo(data){
-  request({
-    url:'https://www.gobigtonight.top/video',
+/**
+ * 
+ * @param {JSON} data 
+ */
+
+export function getVideo(data){
+  return request({
+    url:'https://www.gobigtonight.top/index/getRandomVideo',
     method:'post',
     data:data
   })

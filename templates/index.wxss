@@ -1,13 +1,15 @@
 .showbox-container {
+  width: 330rpx;
+  height: 250rpx;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-bottom: 50rpx;
 }
 
 .showbox-container image {
   width: 330rpx;
   height: 160rpx;
+  border-radius: 3px;
 }
 
 .showbox-container text {

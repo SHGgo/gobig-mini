@@ -1,4 +1,5 @@
 // pages/home/home.js
+import {getVideo} from '../../api/video'
 Page({
 
   /**
@@ -6,11 +7,27 @@ Page({
    */
   data: {
     currentData: 0,
+    videoNum:10,
+    videoList:null
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getCommendVideo()
+  },
+  //api
+  getCommendVideo(){
+    const json = {
+      videoNum:this.data.videoNum
+    }
+    getVideo(json).then((response)=>{
+      this.setData({
+        videoList:response.videoList
+      })
+    }).catch((e)=>{
+      console.log(e);
+    })
   },
   //获取当前滑块的index
   swiperChange: function (e) {

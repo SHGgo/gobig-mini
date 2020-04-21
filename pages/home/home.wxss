@@ -1,7 +1,7 @@
 /* pages/home/home.wxss */
 @import "/templates/index.wxss";
 
-.search {
+.container .search {
   position: relative;
   display: flex;
   padding: 2px 5px;
@@ -13,38 +13,38 @@
   margin-bottom: 20rpx;
 }
 
-.icon-sousuo {
+.container .icon-sousuo {
   margin-left: 3px;
 }
 
-.search-input {
+.container .search-input {
   margin-left: 10px;
   width: 100%;
 }
 
-.top-tab-swiper {
+.container .top-tab-swiper {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   zoom: 1;
   margin-bottom: 20rpx;
 }
 
-.tab {
+.container .top-tab-swiper .tab {
   width: 50%;
   text-align: center;
   padding: 10rpx 0;
 }
 
-.tab-border {
+.container .top-tab-swiper .tab-border {
   border-bottom: 1px solid #f00;
   color: #f00;
 }
 
-.swiper {
+.container .swiper {
   width: 100%;
 }
 
-.commend {
+.container .swiper .commend {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

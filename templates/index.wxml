@@ -1,8 +1,8 @@
 <template name="showBox">
 	<view class="showbox-container">
 		<navigator url="#">
-			<image src="/assets/images/01.jpg"></image>
-			<text>ssssssssssssssss无吾问无为谓无无无无无无无无无无无无无无ssssssssssssssssssssssssssssss</text>
+			<image src="{{'https://www.gobigtonight.top'+pic}}"></image>
+			<text>{{title}}</text>
 		</navigator>
 	</view>
 </template>
