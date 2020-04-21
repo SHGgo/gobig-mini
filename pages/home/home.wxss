@@ -1,0 +1,51 @@
+/* pages/home/home.wxss */
+@import "/templates/index.wxss";
+
+.search {
+  position: relative;
+  display: flex;
+  padding: 2px 5px;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #ececec;
+  margin-bottom: 20rpx;
+}
+
+.icon-sousuo {
+  margin-left: 3px;
+}
+
+.search-input {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.top-tab-swiper {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  zoom: 1;
+  margin-bottom: 20rpx;
+}
+
+.tab {
+  width: 50%;
+  text-align: center;
+  padding: 10rpx 0;
+}
+
+.tab-border {
+  border-bottom: 1px solid #f00;
+  color: #f00;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.commend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
