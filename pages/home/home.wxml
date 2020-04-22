@@ -12,13 +12,17 @@
 	<swiper current="{{currentData}}" class='swiper' duration="300" bindchange="swiperChange" style="height:{{videoNum/2*250}}rpx">
 		<swiper-item>
 			<view class='commend'>
-				<view wx:key="index" wx:for="{{videoList}}">
+				<view wx:key="index" wx:for="{{commendVideoList}}">
 					<template is="showBox" data="{{...item}}"></template>
 				</view>
 			</view>
 		</swiper-item>
 		<swiper-item>
-			<view class='swiper-current'>welcome come to 排行榜</view>
+			<view class='leaderBoard'>
+				<view wx:key="index" wx:for="{{leaderVideoList}}">
+					<template is="longShowBox" data="{{...item}}"></template>
+				</view>
+			</view>
 		</swiper-item>
 	</swiper>
 </view>

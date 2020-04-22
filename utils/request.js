@@ -13,8 +13,10 @@ module.exports = function ({url,method='get', data}) {
       method: method,
       header: { 'Content-Type': 'application/json; charset=utf-8' },
       success: (response)=>{
-        if(response.data.status === 20000 || response.data.status === "200")
-        resolve(response.data)
+        if(response.data.status === 20000 || response.data.status === "200" || response.data.status==null){
+          resolve(response.data)
+        }
+        reject(response.data.status) 
       },
       fail: reject
     })

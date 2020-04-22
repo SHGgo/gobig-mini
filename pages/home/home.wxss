@@ -2,12 +2,13 @@
 @import "/templates/index.wxss";
 
 .container .search {
-  position: relative;
-  display: flex;
-  padding: 2px 5px;
-  align-items: center;
   width: 100%;
   height: 24px;
+  display: flex;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 2px 5px;
+  align-items: center;
   border-radius: 12px;
   background-color: #ececec;
   margin-bottom: 20rpx;
@@ -18,14 +19,13 @@
 }
 
 .container .search-input {
-  margin-left: 10px;
+  padding-left: 10px;
   width: 100%;
 }
 
 .container .top-tab-swiper {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
   display: flex;
-  zoom: 1;
   margin-bottom: 20rpx;
 }
 
@@ -40,12 +40,12 @@
   color: #f00;
 }
 
-.container .swiper {
-  width: 100%;
-}
-
 .container .swiper .commend {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.container .swiper .leaderBoard view{
+  margin-top: 10rpx;
 }

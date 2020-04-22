@@ -1,0 +1,27 @@
+<!--pages/play/play.wxml-->
+<import src="/templates/index.wxml" />
+<view class="video-container">
+	<view class="video-box">
+		<video src="{{videoInfo.videoRes}}"></video>
+	</view>
+	<view class="swiper-tab" bindtap="onTabTap">
+		<view class="tab {{currentTab === 0?'tab-border':''}}" data-current="0">简介</view>
+		<view class="tab {{currentTab === 1?'tab-border':''}}" data-current="1">评论</view>
+	</view>
+	<view>
+		<swiper current="{{currentTab}}" class='swiper' duration="300" bindchange="onSwiperChange" custom-cache="{{false}}">
+			<swiper-item>
+				<view class="video-info">
+					<text class="title black-lg">{{videoInfo.title}}</text>
+					<view class="secendary"> 
+						<text class="black-md">{{videoInfo.author}}</text>
+						<text class="gray-sm">{{videoInfo.releaseDate}}</text>
+					</view>
+					<text class="gray-sm introduction">{{videoInfo.introduction}}</text>
+				</view>
+        <view class="line"></view>
+			</swiper-item>
+			<swiper-item>评论</swiper-item>
+		</swiper>
+	</view>
+</view>

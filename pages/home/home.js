@@ -1,5 +1,6 @@
 // pages/home/home.js
-import {getVideo} from '../../api/video'
+import {getCommendVideoList,getLeaderVideoList} from '../../api/video'
+import { formatTime } from '../../utils/util'
 Page({
 
   /**
@@ -8,25 +9,52 @@ Page({
   data: {
     currentData: 0,
     videoNum:10,
-    videoList:null
+    pageHeight:0,
+    commendVideoList:null,
+    leaderVideoList:null
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.getCommendVideo()
+    this.getLeaderVideo()
+  },
+  onPullDownRefresh(){
+    this.getCommendVideo()
+    this.getLeaderBoard()
   },
   //api
   getCommendVideo(){
     const json = {
       videoNum:this.data.videoNum
     }
-    getVideo(json).then((response)=>{
+    getCommendVideoList(json).then((response)=>{      
       this.setData({
-        videoList:response.videoList
+        commendVideoList:response.videoList
       })
+      wx.stopPullDownRefresh()
     }).catch((e)=>{
       console.log(e);
+      wx.stopPullDownRefresh()
+    })
+  },
+  getLeaderVideo(){
+    const json = {
+      videoNum:this.data.videoNum
+    }
+    getLeaderVideoList(json).then((response)=>{
+      response.videoList.filter((ele)=>{
+        ele.releaseDate = formatTime(ele.releaseDate)
+        return true;
+      })
+      this.setData({
+        leaderVideoList:response.videoList
+      })
+      wx.stopPullDownRefresh()
+    }).catch((e)=>{
+      console.log(e);
+      wx.stopPullDownRefresh()
     })
   },
   //获取当前滑块的index

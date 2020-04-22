@@ -2,7 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/sort/sort",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/play/play"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -28,7 +29,7 @@
         "text": "分类",
         "pagePath": "pages/sort/sort",
         "iconPath": "assets/icons/sort.png",
-        "selectedIconPath": "assets/icons/sort-select.png" 
+        "selectedIconPath": "assets/icons/sort-select.png"
       },
       {
         "text": "我的",

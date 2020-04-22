@@ -1,8 +1,21 @@
 <template name="showBox">
 	<view class="showbox-container">
-		<navigator url="#">
+		<navigator url="/pages/play/play?vid={{vid}}">
 			<image src="{{'https://www.gobigtonight.top'+pic}}"></image>
 			<text>{{title}}</text>
+		</navigator>
+	</view>
+</template>
+
+<template name="longShowBox">
+	<view class="longshowbox-container">
+		<navigator url="/pages/play/play?vid={{vid}}">
+			<image src="{{'https://www.gobigtonight.top'+pic}}"></image>
+			<view class="videoInfo">
+				<text class="title black-sm">{{title}}</text>
+				<text class="black-xs">{{author}}</text>
+				<text class="gray-xs">{{releaseDate}}</text>
+			</view>
 		</navigator>
 	</view>
 </template>
